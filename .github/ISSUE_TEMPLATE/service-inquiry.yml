@@ -1,5 +1,5 @@
 name: Service inquiry
-description: Request a fixed TON quote for scraping, automation, monitoring, or a Python utility
+description: Request a fixed USDT quote for scraping, automation, monitoring, or a Python utility, payable on the TON network
 title: "[Service inquiry] "
 labels:
   - service-inquiry
@@ -48,9 +48,9 @@ body:
   - type: input
     id: budget
     attributes:
-      label: Budget range in TON
+      label: Budget range in USDT (TON network)
       description: Payment is requested only after the scope and fixed quote are accepted in this issue.
-      placeholder: e.g. 10–20 TON
+      placeholder: e.g. 10–20 USDT
   - type: textarea
     id: constraints
     attributes:
