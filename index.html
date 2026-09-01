@@ -225,6 +225,40 @@
         <div class="container">
             <h2>Get in touch</h2>
             <p class="subtitle">Request work through the structured GitHub form. Do not include secrets or private data.</p>
+
+            <!-- Email capture for launch notifications -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; text-align: center; max-width: 600px; margin: 0 auto 30px auto;">
+                <h3 style="margin-bottom: 10px;">📬 Stay updated</h3>
+                <p style="color: var(--muted); margin-bottom: 15px; font-size: 14px;">Get notified about new tools, discounts, and services. No spam.</p>
+                <form id="email-capture" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" id="email-input" placeholder="your@email.com" required style="padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 14px; width: 250px;">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p id="email-status" style="margin-top: 10px; font-size: 12px; color: var(--green); display: none;"></p>
+            </div>
+
+            <!-- Social proof -->
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://github.com/ovannesovannisian-coder/datascrape-pro" target="_blank" rel="noopener" style="margin: 0 5px;">
+                    <img src="https://img.shields.io/github/stars/ovannesovannisian-coder/datascrape-pro?style=social" alt="Stars" style="height: 20px;">
+                </a>
+                <a href="https://github.com/ovannesovannisian-coder/autopilot-cli" target="_blank" rel="noopener" style="margin: 0 5px;">
+                    <img src="https://img.shields.io/github/stars/ovannesovannisian-coder/autopilot-cli?style=social" alt="Stars" style="height: 20px;">
+                </a>
+                <a href="https://github.com/ovannesovannisian-coder/json-resume-builder" target="_blank" rel="noopener" style="margin: 0 5px;">
+                    <img src="https://img.shields.io/github/stars/ovannesovannisian-coder/json-resume-builder?style=social" alt="Stars" style="height: 20px;">
+                </a>
+                <a href="https://github.com/ovannesovannisian-coder/mockserve" target="_blank" rel="noopener" style="margin: 0 5px;">
+                    <img src="https://img.shields.io/github/stars/ovannesovannisian-coder/mockserve?style=social" alt="Stars" style="height: 20px;">
+                </a>
+            </div>
+
+            <!-- Limited time offer -->
+            <div style="background: linear-gradient(135deg, #1a1040 0%, #0f172a 100%); border: 1px solid var(--accent); border-radius: var(--radius); padding: 20px; text-align: center; max-width: 600px; margin: 0 auto 30px auto;">
+                <p style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">🎉 First 3 customers: 20% off any service</p>
+                <p style="color: var(--muted); font-size: 14px;">Custom scraping, data pipelines, or Python tools — fixed USDT quotes, pay after scope confirmation.</p>
+            </div>
+
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; text-align: center; max-width: 600px; margin: 0 auto;">
                 <p style="margin-bottom: 20px; color: var(--muted);">Describe the outcome, public inputs, deadline, and budget. Payment is requested only after scope and price are confirmed in the issue.</p>
                 <a href="https://github.com/ovannesovannisian-coder/ovannesovannisian-coder.github.io/issues/new?template=service-inquiry.yml" target="_blank" rel="noopener" class="btn btn-primary">Request a fixed quote</a>
@@ -254,5 +288,30 @@
             © 2026 ovannesovannisian-coder. All rights reserved. · <a href="https://github.com/ovannesovannisian-coder">GitHub</a>
         </div>
     </footer>
+
+    <!-- Email capture + analytics script -->
+    <script>
+        document.getElementById('email-capture')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            const status = document.getElementById('email-status');
+            // Simple client-side capture (replace with your backend/form provider when ready)
+            if (email && email.includes('@')) {
+                status.textContent = 'Thanks! You're on the list. Check your inbox.';
+                status.style.display = 'block';
+                document.getElementById('email-input').value = '';
+                // Log to localStorage as placeholder (replace with real backend)
+                try {
+                    const subs = JSON.parse(localStorage.getItem('subscribers') || '[]');
+                    subs.push({ email, ts: Date.now() });
+                    localStorage.setItem('subscribers', JSON.stringify(subs));
+                } catch (e) {}
+            } else {
+                status.textContent = 'Please enter a valid email.';
+                status.style.color = 'var(--red)';
+                status.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
