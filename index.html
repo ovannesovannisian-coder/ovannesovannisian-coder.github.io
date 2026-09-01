@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ovannesovannisian-coder — Developer Tools & Automation Services</title>
-    <meta name="description" content="Zero-dependency Python developer tools: DataScrape Pro, AutoPilot CLI, JSON Resume Builder, MockServe. All MIT licensed, stdlib-only.">
+    <meta name="description" content="Free zero-dependency Python tools and fixed-scope automation services. Pay or sponsor with TON.">
     <style>
         :root {
             --bg: #0a0f1a;
@@ -92,6 +92,9 @@
         .service-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
         .service-card h3 { margin-bottom: 8px; }
         .service-card p { color: var(--muted); }
+        .payment-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; max-width: 760px; margin: 32px auto 0; }
+        .wallet { display: block; overflow-wrap: anywhere; padding: 12px; margin: 16px 0; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85rem; }
+        .fine-print { color: var(--muted); font-size: .85rem; margin-top: 16px; }
     </style>
 </head>
 <body>
@@ -109,7 +112,7 @@
     <section class="hero">
         <div class="container">
             <h1>Developer Tools & Automation</h1>
-            <p>Four zero-dependency Python tools for scraping, automation, resumes, and API mocking. All MIT licensed, pure stdlib, one-time purchase.</p>
+            <p>Free zero-dependency Python tools for scraping, automation, resumes, and API mocking — plus fixed-scope custom work paid in TON.</p>
             <div class="cta-row">
                 <a href="#products" class="btn btn-primary">View Products</a>
                 <a href="https://github.com/ovannesovannisian-coder" class="btn btn-secondary" target="_blank">GitHub Profile</a>
@@ -135,7 +138,7 @@
                         <li>TaskRunner for multi-stage pipelines</li>
                         <li>CLI for quick one-liners</li>
                     </ul>
-                    <div class="price">$29 / $99 / $499</div>
+                    <div class="price">Free · MIT</div>
                     <a href="https://ovannesovannisian-coder.github.io/datascrape-pro/" class="btn btn-primary" target="_blank">View Product</a>
                 </div>
                 <div class="card">
@@ -151,7 +154,7 @@
                         <li>System health checks (disk, memory, uptime)</li>
                         <li>JSON output for monitoring scripts</li>
                     </ul>
-                    <div class="price">$19</div>
+                    <div class="price">Free · MIT</div>
                     <a href="https://ovannesovannisian-coder.github.io/autopilot-cli/" class="btn btn-primary" target="_blank">View Product</a>
                 </div>
                 <div class="card">
@@ -168,7 +171,7 @@
                         <li>JSON Schema validation</li>
                         <li>Clickable links in PDF output</li>
                     </ul>
-                    <div class="price">$9</div>
+                    <div class="price">Free · MIT</div>
                     <a href="https://ovannesovannisian-coder.github.io/json-resume-builder/" class="btn btn-primary" target="_blank">View Product</a>
                 </div>
                 <div class="card">
@@ -185,7 +188,7 @@
                         <li>Hot reload ready for TDD loops</li>
                         <li>Runs in CI containers, no Docker needed</li>
                     </ul>
-                    <div class="price">$19</div>
+                    <div class="price">Free · MIT</div>
                     <a href="https://ovannesovannisian-coder.github.io/mockserve/" class="btn btn-primary" target="_blank">View Product</a>
                 </div>
             </div>
@@ -195,23 +198,23 @@
     <section id="services" class="section services-section">
         <div class="container">
             <h2>Custom Services</h2>
-            <p class="subtitle">Don't have time to build it yourself? We'll do it for you.</p>
+            <p class="subtitle">Open a public request, receive a fixed quote, then pay in TON after the scope is accepted.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Custom Scraper — $500+</h3>
-                    <p>Target any public website and get clean, structured data delivered on schedule. Price depends on complexity.</p>
+                    <h3>Custom Scraper</h3>
+                    <p>Collect permitted public data and deliver clean CSV or JSON. Fixed TON quote based on scope.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Data Pipeline — $1,000+</h3>
+                    <h3>Data Pipeline</h3>
                     <p>Automate the flow from raw HTML → cleaned CSV/JSON → your database or spreadsheet.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Monitoring Setup — $300+</h3>
-                    <p>Track price changes, stock levels, or content updates on any site. Daily/weekly alerts.</p>
+                    <h3>Monitoring Setup</h3>
+                    <p>Track permitted price, stock, or content changes with a lightweight scheduled script.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Consulting — $150/hr</h3>
-                    <p>1-on-1 code review, architecture advice, or team training on ethical scraping and automation.</p>
+                    <h3>Python Utility</h3>
+                    <p>A small CLI, converter, report generator, or API mock built to a written acceptance test.</p>
                 </div>
             </div>
         </div>
@@ -220,12 +223,21 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Get in touch</h2>
-            <p class="subtitle">Questions? Custom quote? Just say hello.</p>
+            <p class="subtitle">Request work through the structured GitHub form. Do not include secrets or private data.</p>
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="margin-bottom: 20px; color: var(--muted);">We respond within 24 hours.</p>
-                <a href="https://github.com/ovannesovannisian-coder" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile</a>
-                <br><br>
-                <a href="https://github.com/ovannesovannisian-coder/datascrape-pro/issues/new" target="_blank" rel="noopener" class="btn btn-secondary">Contact via GitHub Issues</a>
+                <p style="margin-bottom: 20px; color: var(--muted);">Describe the outcome, public inputs, deadline, and budget. Payment is requested only after scope and price are confirmed in the issue.</p>
+                <a href="https://github.com/ovannesovannisian-coder/ovannesovannisian-coder.github.io/issues/new?template=service-inquiry.yml" target="_blank" rel="noopener" class="btn btn-primary">Request a fixed quote</a>
+                <br><br><a href="https://github.com/ovannesovannisian-coder" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile</a>
+            </div>
+            <div class="payment-box">
+                <h3>Pay or sponsor with TON</h3>
+                <p>Accepted work is paid to this TON Mainnet address. Include the GitHub issue number in the transfer comment so the payment can be matched. You can also sponsor the free tools directly.</p>
+                <span class="wallet">UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk</span>
+                <div class="cta-row">
+                    <a href="https://app.tonkeeper.com/transfer/UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk?amount=1000000000&amp;text=Open-source%20sponsor" class="btn btn-primary" rel="noopener">Sponsor 1 TON</a>
+                    <a href="https://tonscan.com/address/UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk" class="btn btn-secondary" target="_blank" rel="noopener">Verify address</a>
+                </div>
+                <p class="fine-print">TON payments are irreversible. For services, do not send funds until a quote is confirmed. The sponsor button opens Tonkeeper with a prefilled 1 TON transfer.</p>
             </div>
         </div>
     </section>

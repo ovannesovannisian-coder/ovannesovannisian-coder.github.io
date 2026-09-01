@@ -1,5 +1,5 @@
 name: Service inquiry
-description: Request a quote for scraping, automation, monitoring, or consulting
+description: Request a fixed TON quote for scraping, automation, monitoring, or a Python utility
 title: "[Service inquiry] "
 labels:
   - service-inquiry
@@ -13,7 +13,7 @@ body:
         - Data pipeline
         - Monitoring and alerts
         - Automation tooling
-        - Consulting or code review
+        - Small Python utility
         - Other
     validations:
       required: true
@@ -21,15 +21,23 @@ body:
     id: goal
     attributes:
       label: Project goal
-      description: Describe the outcome you need. Do not include passwords, API keys, or private data.
-      placeholder: What should be collected, automated, monitored, or reviewed?
+      description: Describe the outcome you need. Do not include passwords, API keys, private data, or confidential URLs.
+      placeholder: What should be collected, automated, monitored, converted, or generated?
     validations:
       required: true
   - type: textarea
     id: source-output
     attributes:
-      label: Inputs and desired output
+      label: Public inputs and desired output
       description: Public source URLs, formats, approximate volume, and delivery format.
+    validations:
+      required: true
+  - type: input
+    id: acceptance
+    attributes:
+      label: Acceptance test
+      description: State one concrete test that would prove the work is complete.
+      placeholder: e.g. The command converts the sample JSON into a CSV with these five columns
     validations:
       required: true
   - type: input
@@ -40,10 +48,11 @@ body:
   - type: input
     id: budget
     attributes:
-      label: Budget range
-      placeholder: e.g. USD 500–1,000
+      label: Budget range in TON
+      description: Payment is requested only after the scope and fixed quote are accepted in this issue.
+      placeholder: e.g. 10–20 TON
   - type: textarea
     id: constraints
     attributes:
       label: Constraints or notes
-      description: Compliance, hosting, scheduling, or integration requirements.
+      description: Compliance, hosting, scheduling, or integration requirements. Do not post secrets.
