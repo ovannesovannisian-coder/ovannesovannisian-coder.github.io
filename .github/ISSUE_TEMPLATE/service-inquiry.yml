@@ -1,0 +1,49 @@
+name: Service inquiry
+description: Request a quote for scraping, automation, monitoring, or consulting
+title: "[Service inquiry] "
+labels:
+  - service-inquiry
+body:
+  - type: dropdown
+    id: service
+    attributes:
+      label: Service needed
+      options:
+        - Custom web scraper
+        - Data pipeline
+        - Monitoring and alerts
+        - Automation tooling
+        - Consulting or code review
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Project goal
+      description: Describe the outcome you need. Do not include passwords, API keys, or private data.
+      placeholder: What should be collected, automated, monitored, or reviewed?
+    validations:
+      required: true
+  - type: textarea
+    id: source-output
+    attributes:
+      label: Inputs and desired output
+      description: Public source URLs, formats, approximate volume, and delivery format.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Desired deadline
+      placeholder: e.g. Within two weeks
+  - type: input
+    id: budget
+    attributes:
+      label: Budget range
+      placeholder: e.g. USD 500–1,000
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints or notes
+      description: Compliance, hosting, scheduling, or integration requirements.
